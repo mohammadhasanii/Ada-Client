@@ -1,0 +1,150 @@
+
+<script>
+    window.onload = function() {
+    // آخرین message رو پیدا میکنیم
+    const messages = document.querySelectorAll('ul li');
+    const lastMessage = messages[messages.length - 1];
+    
+    if (lastMessage) {
+        lastMessage.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const textarea = document.querySelector('textarea[name="promt"]');
+    const loadingElement = document.getElementById('loading');
+
+    form.addEventListener('submit', function() {
+        loadingElement.classList.remove('hidden');
+       
+    });
+});
+</script>
+<div id="loading" class="hidden fixed inset-0 bg-gray-900/50 backdrop-blur-sm flex items-center justify-center" style="z-index: 1000;">
+
+
+<button disabled type="button" class="py-2.5 px-5 me-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
+<svg aria-hidden="true" role="status" class="inline w-4 h-4 me-3 text-gray-200 animate-spin dark:text-gray-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+<path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="#1C64F2"/>
+</svg>
+Loading...
+</button>
+
+</div>
+<div class="relative h-screen">
+
+  <div id="target" class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Title -->
+    <div class="text-center">
+      <div class="mb-4 flex justify-center items-center">
+        <!-- Logo -->
+     
+     
+        <!-- End Logo -->
+
+       
+        <img
+            style='width: 70px; border-radius: 7px;'
+            src='https://weshape.tech/wp-content/uploads/Ada-Lovelace_WST-background_1200x1200-1024x1024.jpg'
+            alt=''
+          />
+      </div>
+
+      <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
+        Welcome to Ada AI
+      </h1>
+      <p class="mt-3 text-gray-600 dark:text-neutral-400">
+        ChatID <span class="underline">
+            {{this.chatId}}
+        </span>
+      </p>
+    </div>
+    <!-- End Title -->
+
+    <ul class="mt-16 space-y-5">
+
+    {{#each messages}}
+  {{#if this.isUser}}
+    <li class="max-w-2xl ms-auto flex justify-end gap-x-2 sm:gap-x-4">
+      <div class="grow text-end space-y-3">
+        <!-- Card -->
+        <div style="text-align: {{this.direction}}" class="inline-block bg-blue-600 rounded-lg p-4 shadow-sm">
+          <p  class="text-sm text-white">
+            {{{this.content}}} <!-- Render raw HTML -->
+          </p>
+        </div>
+        <!-- End Card -->
+      </div>
+    </li>
+  {{else}}
+    <li  class="flex gap-x-2 sm:gap-x-4">
+      <div class="grow max-w-[90%] md:max-w-2xl w-full space-y-3">
+        <!-- Card -->
+        <div class="bg-blue-600 border border-gray-200 rounded-lg p-4 space-y-3">
+          <p style="text-align: {{this.direction}}" class="text-sm  text-white">
+            {{{this.content}}} <!-- Render raw HTML -->
+          </p>
+        </div>
+        <!-- End Card -->
+      </div>
+    </li>
+  {{/if}}
+{{/each}}
+
+
+    
+    
+  </div>
+
+  <div class="max-w-4xl mx-auto sticky bottom-0 z-10 bg-white border-t border-gray-200 pt-2 pb-4 sm:pt-4 sm:pb-6 px-4 sm:px-6 lg:px-0 dark:bg-neutral-900 dark:border-neutral-700">
+    <!-- Textarea -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
+   
+   
+
+    <form action="/promt" method="post">
+    <input type="hidden" hidden name="chatId" value={{this.chatId}}>
+      <!-- Input -->
+      <div class="relative">
+        <textarea     name="promt" class="p-4 pb-12 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="هر سوالی داری از آدا بپرس..."></textarea>
+
+        <!-- Toolbar -->
+        <div class="absolute bottom-px inset-x-px p-2 rounded-b-lg bg-white dark:bg-neutral-900">
+          <div class="flex justify-between items-center">
+            <!-- Button Group -->
+            <div class="flex items-center">
+              <!-- Mic Button -->
+              <button type="button" class="inline-flex shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:bg-gray-100 focus:z-10 focus:outline-none focus:bg-gray-100 dark:text-neutral-500 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="9" x2="15" y1="15" y2="9"/></svg>
+              </button>
+              <!-- End Mic Button -->
+
+              <!-- Attach Button -->
+              <button disabled type="button" class="disabled inline-flex shrink-0 justify-center items-center size-8 rounded-lg text-gray-500 hover:bg-gray-100 focus:z-10 focus:outline-none focus:bg-gray-100 dark:text-neutral-500 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              </button>
+              <!-- End Attach Button -->
+            </div>
+      
+      
+              <button type="submit" class="inline-flex shrink-0 justify-center items-center size-8 rounded-lg text-white bg-blue-600 hover:bg-blue-500 focus:z-10 focus:outline-none focus:bg-blue-500">
+                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                </svg>
+              </button>
+              <!-- End Send Button -->
+            </div>
+            </form>
+            <!-- End Button Group -->
+          </div>
+        </div>
+        <!-- End Toolbar -->
+      </div>
+      <!-- End Input -->
+    </div>
+    <!-- End Textarea -->
+  </div>
+</div>
+<!-- End Content -->

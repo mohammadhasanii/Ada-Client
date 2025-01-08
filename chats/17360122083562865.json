@@ -1,0 +1,14 @@
+{
+  "id": "17360122083562865",
+  "timestamp": "2025-01-04T17:36:48.356Z",
+  "messages": [
+    {
+      "role": "user",
+      "content": "یه کد بنویس با golang"
+    },
+    {
+      "role": "assistant",
+      "content": "##  نمونه کد Golang: \\n\\nدر اینجا یک مثال از کد Golang است که به طور کلی تابعی را برای محاسبه مجموع دو عدد به نمایش می گذارد.\\n\\n\\n```go\\npackage main\\n\\nimport \\fmt\\\\n\\nfunc sum(a, b int) int {\\n  return a + b\\n}\\n\\nfunc main() {\\n  result := sum(5, 3)\\n  fmt.Println(\\Sum of numbers is:\\ result)\\n}\\n```\\n\\n\\n**توضیح:**\\n\\n1. **`package main`**: این خط به عنوان package declaration استفاده می شود و نشان دهنده اینکه کد مربوط به `main` program است.\\n2. **`import \\fmt\\**: این خط از فریمور `fmt` را برای دسترسی به تابع `Println()` import می کند.\\n3. **`func sum(a, b int) int`**: این خط یک 함수 called `sum`  را تعریف می کند که دو entier ( `a` و `b`) را دریافت می کند و مقادیر آن را جمع می کند و مقدار resultado بر اساس آن به صورت عدد صحیح بازگردانده می شود.\\n4. **`func main() { ... }`**: این خط main program است. \\n5. **`result := sum(5, 3)`**: در اینجا، `sum()` 함수 با دو عدد `5` و `3` اجرا شده و مقادیر آن به `result`  منتقل می شود.\\n6. **`fmt.Println(\\Sum of numbers is:\\ result)`**: این خط متن `Sum of numbers is: ...` را چاپ می کند و `result` (مقدار جمع) را نیز در کنار آن چاپ می کند.\\n\\n\\n\\n**نحوه استفاده:**\\n\\n\\nبرای اجرا این کد، به `Go` program  را در یک environment developer با kompilator `go`  ویرایش کنید. \\n\\n **نکات:**\\n \\n - Golang از نماد ویندوز مانند `*` و `=` برای تعریف متغیرها استفاده می کند. \\n - این کد نمونه ای ساده است که به شما کمک می کند درک اولیه Golang را کسب کنید. \\n\\n\\n\\n"
+    }
+  ]
+}

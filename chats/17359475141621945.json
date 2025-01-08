@@ -1,0 +1,14 @@
+{
+  "id": "17359475141621945",
+  "timestamp": "2025-01-03T23:38:34.162Z",
+  "messages": [
+    {
+      "role": "user",
+      "content": "whts your name?"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.2755563Z\",\"message\":{\"role\":\"assistant\",\"content\":\"My\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.3950795Z\",\"message\":{\"role\":\"assistant\",\"content\":\" name\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.5021042Z\",\"message\":{\"role\":\"assistant\",\"content\":\" is\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.6126967Z\",\"message\":{\"role\":\"assistant\",\"content\":\" Gemma\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.723185Z\",\"message\":{\"role\":\"assistant\",\"content\":\"!\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.8330451Z\",\"message\":{\"role\":\"assistant\",\"content\":\" 😊\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:33.9405766Z\",\"message\":{\"role\":\"assistant\",\"content\":\" \"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:34.0528468Z\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:38:34.1638639Z\",\"message\":{\"role\":\"assistant\",\"content\":\"\"},\"done_reason\":\"stop\",\"done\":true,\"total_duration\":1062891800,\"load_duration\":47924500,\"prompt_eval_count\":14,\"prompt_eval_duration\":121000000,\"eval_count\":9,\"eval_duration\":892000000}\n"
+    }
+  ]
+}

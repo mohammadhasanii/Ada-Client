@@ -1,0 +1,14 @@
+{
+  "id": "17359484636661046",
+  "timestamp": "2025-01-03T23:54:23.666Z",
+  "messages": [
+    {
+      "role": "user",
+      "content": "whts your name?"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:21.72079Z\",\"message\":{\"role\":\"assistant\",\"content\":\"My\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:21.8334362Z\",\"message\":{\"role\":\"assistant\",\"content\":\" name\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:21.9474828Z\",\"message\":{\"role\":\"assistant\",\"content\":\" is\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.0625405Z\",\"message\":{\"role\":\"assistant\",\"content\":\" Gemma\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.1766299Z\",\"message\":{\"role\":\"assistant\",\"content\":\".\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.2917138Z\",\"message\":{\"role\":\"assistant\",\"content\":\" 😊\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.3969406Z\",\"message\":{\"role\":\"assistant\",\"content\":\"  \"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.5137508Z\",\"message\":{\"role\":\"assistant\",\"content\":\"How\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.6259152Z\",\"message\":{\"role\":\"assistant\",\"content\":\" can\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.7332031Z\",\"message\":{\"role\":\"assistant\",\"content\":\" I\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:22.842613Z\",\"message\":{\"role\":\"assistant\",\"content\":\" help\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:23.0575491Z\",\"message\":{\"role\":\"assistant\",\"content\":\" you\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:23.1750637Z\",\"message\":{\"role\":\"assistant\",\"content\":\" today\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:23.2880961Z\",\"message\":{\"role\":\"assistant\",\"content\":\"?\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:23.4106005Z\",\"message\":{\"role\":\"assistant\",\"content\":\" \"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:23.5262496Z\",\"message\":{\"role\":\"assistant\",\"content\":\"\\n\"},\"done\":false}\n{\"model\":\"gemma2:2b\",\"created_at\":\"2025-01-03T23:54:23.6619788Z\",\"message\":{\"role\":\"assistant\",\"content\":\"\"},\"done_reason\":\"stop\",\"done\":true,\"total_duration\":2156262200,\"load_duration\":74795700,\"prompt_eval_count\":14,\"prompt_eval_duration\":134000000,\"eval_count\":17,\"eval_duration\":1945000000}\n"
+    }
+  ]
+}
